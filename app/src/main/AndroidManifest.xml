@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- For Connection -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- For Camera and Storage -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+
+
+<!--    android:usesCleartextTraffic="true"-->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OCR_DatabaseConnection"
+        tools:targetApi="31">
+
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- CrudActionsActivity -->
+        <activity
+            android:name=".CrudActionsActivity"
+            android:label="CRUD Actions"
+            android:theme="@style/Theme.OCR_DatabaseConnection">
+        </activity>
+
+        <!-- CreateInvoiceActivity -->
+        <activity
+            android:name=".CreateInvoiceActivity"
+            android:label="Create Invoice"
+            android:theme="@style/Theme.OCR_DatabaseConnection"
+            android:windowSoftInputMode="adjustResize"/>
+<!--        adjustResize    stateHidden-->
+        <!-- ReadInvoiceActivity -->
+        <activity
+            android:name=".ReadInvoiceActivity"
+            android:label="Read Invoice"
+            android:theme="@style/Theme.OCR_DatabaseConnection"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- UpdateInvoiceActivity -->
+        <activity
+            android:name=".UpdateInvoiceActivity"
+            android:label="Update Invoice"
+            android:theme="@style/Theme.OCR_DatabaseConnection"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- DeleteInvoiceActivity -->
+        <activity
+            android:name=".DeleteInvoiceActivity"
+            android:label="Delete Invoice"
+            android:theme="@style/Theme.OCR_DatabaseConnection"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- DeleteInvoiceActivity -->
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login"
+            android:theme="@style/Theme.OCR_DatabaseConnection"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- DeleteInvoiceActivity -->
+        <activity
+            android:name=".DataExplorerActivity"
+            android:label="Data Explorer"
+            android:theme="@style/Theme.OCR_DatabaseConnection"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- ConvertToPDFActivity -->
+        <activity
+            android:name=".PdfActivity"
+            android:exported="true" />
+
+        <!-- DashboardActivity -->
+        <activity
+            android:name=".DashboardActivity"
+            android:label="Dashboard"
+            android:theme="@style/Theme.OCR_DatabaseConnection"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- ChartActivity -->
+        <activity
+            android:name=".ChartActivity"
+            android:label="Chart"
+            android:theme="@style/Theme.OCR_DatabaseConnection"
+            android:windowSoftInputMode="adjustResize"/>
+
+    </application>
+
+</manifest>

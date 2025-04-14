@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ReadInvoiceActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Read Invoice"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:background="@drawable/imageview_border"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginTop="30dp"/>
+
+    <!-- Invoice ID EditText -->
+    <EditText
+        android:id="@+id/etInvoiceIdRead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Invoice ID"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Read Invoice Button -->
+    <Button
+        android:id="@+id/btnRead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Read Invoice"
+        tools:ignore="HardcodedText"
+        app:layout_constraintTop_toBottomOf="@id/etInvoiceIdRead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp" />
+
+    <!-- ScrollView for extracted text -->
+    <ScrollView
+        android:id="@+id/scrollExtractedText"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/textview_border"
+        android:fillViewport="true"
+        android:scrollbars="vertical|horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btnRead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvInvoiceDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="150dp"
+            android:padding="16dp"
+            android:text="Invoice details will appear here..."
+            android:gravity="center"
+            android:textSize="16sp"
+            android:scrollHorizontally="true" />
+
+    </ScrollView>
+
+    <!-- Convert To PDF Button (below the text area) -->
+    <Button
+        android:id="@+id/btnConvertToPdf"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Convert To PDF"
+        tools:ignore="HardcodedText"
+        app:layout_constraintTop_toBottomOf="@id/scrollExtractedText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="34dp"/>
+
+    <!-- Back to CRUD Button (aligned in the same row as Home button) -->
+    <Button
+        android:id="@+id/btnBackToCrudRead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Back to CRUD"
+        app:layout_constraintTop_toBottomOf="@id/btnConvertToPdf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnHome"
+        android:layout_marginEnd="8dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Home Button (aligned in the same row as Back to CRUD button) -->
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        app:layout_constraintTop_toBottomOf="@id/btnConvertToPdf"
+        app:layout_constraintStart_toEndOf="@id/btnBackToCrudRead"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

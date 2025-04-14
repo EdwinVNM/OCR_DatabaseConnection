@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".DeleteInvoiceActivity">
+
+    <TextView
+        android:id="@+id/tvTitleCreate"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/imageview_border"
+        android:padding="16dp"
+        android:text="Delete Invoice"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etInvoiceIdDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:hint="Enter Invoice ID"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleCreate"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Delete Invoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etInvoiceIdDelete"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btnDelete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnBackToCrudDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Back to CRUD"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
