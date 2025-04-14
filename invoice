@@ -1,0 +1,29 @@
+-- USE OCR_Project;
+USE WebDev3_2024;
+
+--
+-- Table structure for table `invoice`
+--
+DROP TABLE IF EXISTS `invoice`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `invoice` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_name` varchar(45) DEFAULT NULL,
+  `invoice_date` varchar(45) DEFAULT NULL,
+  `due_date` varchar(45) DEFAULT NULL,
+  `total_amount` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)  -- This line defines the primary key
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+INSERT INTO `invoice` VALUES (1, 'John A', '26/02/25', '28/02/25', '10.00', 'Paid'),
+(2, 'John B', '26/03/25', '28/03/25', '11.00', 'Paid'),
+(3, 'John C', '26/04/25', '28/04/25', '12.00', 'Paid'),
+(4, 'John A', '26/02/25', '28/02/25', '10.00', 'Partially'),
+(5, 'John B', '26/03/25', '28/03/25', '11.00', 'Partially'),
+(6, 'John C', '26/04/25', '28/04/25', '12.00', 'Partially'),
+(7, 'John A', '26/02/25', '28/02/25', '10.00', 'Unpaid'),
+(8, 'John B', '26/03/25', '28/03/25', '11.00', 'Unpaid'),
+(9, 'John C', '26/04/25', '28/04/25', '12.00', 'Unpaid');
+SELECT * FROM invoice;
