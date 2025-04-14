@@ -1,6 +1,5 @@
 This Android Application extracts Invoice Details from Invoices and sends them to a MySQL Database (XAMPP) where you can later edit/filter these invoices.
 
-![image](https://github.com/user-attachments/assets/e0082f78-4878-4776-825f-47afd0398291)
 
 How to run it:
 
@@ -20,3 +19,5 @@ How to run it:
         "status": "Partially"
     }
 ]
+
+![image](https://github.com/user-attachments/assets/8895e355-6ec6-4d25-8ebf-4cde27d1fcff)
