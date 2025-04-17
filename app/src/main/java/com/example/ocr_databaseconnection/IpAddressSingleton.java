@@ -11,7 +11,7 @@ public class IpAddressSingleton {
             this.ipAddress = "http://10.0.2.2:8080";
         } else {
             // Set the IP to your laptop's IP address for physical devices
-            this.ipAddress = "http://172.20.10.2:8080"; // Replace with your laptop's IP
+            this.ipAddress = "http://<IPADDRESS>:8080"; // Replace with your laptop's IP
         }//<YOUR_IPV4_ADDRESS>
     }
 
