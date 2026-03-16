@@ -1,5 +1,6 @@
 This Android Application extracts Invoice Details from Invoices and sends them to a MySQL Database (XAMPP) where you can later edit/filter these invoices.
 
+This is a recreation of the original OCR repository for AutoScale's OCR project for easy download and project overview. You can view the original OCR version control @ https://github.com/EdwinVNM/OCR
 
 How to run it:
 
